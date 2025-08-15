@@ -29,66 +29,28 @@ const sayilar = [
   867.7,
 ];
 
-/* ÖRNEK GÖREV: KareninAlani fonksiyonunu kullanarak aşağıdakileri uygulayın: 
-	1. Karenin kenar uzunluğunu fonksiyonun tek parametresi olarak alacak 
-	2. Karenin alanını hesaplayacak (💡 İPUCU: karenin alanı = karenin kenar uzunluğunun karesi)
-	3. Hesaplanan alanı döndürecek
-*/
-
-//Örneğin çözümü:
+/* ÖRNEK GÖREV: KareninAlani */
 function KareninAlani(kenaruzunlugu) {
   return kenaruzunlugu * kenaruzunlugu;
 }
+// Örnek çalıştırma:
+console.log("Karenin alanı (10):", KareninAlani(10));
 
-/* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
-/* GÖREV 1:  
-- CemberinCevresi fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
-	1. CemberinCevresi fonksiyonu parametre olarak sadece çemberin yarıçapını alacaktır. 
-	2. Global değişken olarak verilmiş pi sayısı fonksiyon içinde kullanılacak (pi sayısı fonksiyonun parametresi olarak alınmayacaktır)
-	3. Çemberin çevresi hesaplanacaktır (💡 İPUCU: Çemberin çevresi = 2 * pi * yarıçap)
-	4. Hesaplanan çemberin çevresi döndürülecektir.
-*/
-
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+/* GÖREV 1: Çemberin çevresi */
+function CemberinCevresi(yaricap) {
+  return 2 * pi * yaricap;
 }
+// Örnek çalıştırma:
+console.log("Çemberin çevresi (r=5):", CemberinCevresi(5));
 
-/* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
-/* 	GÖREV 2:  
-- CemberinAlani fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
-	1. Argüman olarak çemberin yarıçapını BİRİNCİ parametre olacak alacaktır. 
-	2. Global değişken olarak verilmiş pi sayısını fonksiyonun İKİNCİ parametresi olacak alacaktır.
-	3. Çemberin alanı hesaplanacaktır (💡 İPUCU: Çemberin alanı = pi * yarıçapın karesi, yarıçapın karesini bulmak için Javascript içinde tanımlı Math kütüphanesini kullanabilirsiniz. Math.pow(yaricap,2))
-	4. Hesaplanan çemberin alanı döndürülecektir.
-*/
-
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+/* GÖREV 2: Çemberin alanı */
+function CemberinAlani(yaricap, piSayisi) {
+  return piSayisi * Math.pow(yaricap, 2);
 }
+// Örnek çalıştırma:
+console.log("Çemberin alanı (r=15):", CemberinAlani(15, pi));
 
-/* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
-/* 	GÖREV 3:
-	- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
-		3a. enbuyuk ve enkucuk isminde 2 adet değişken tanımlayın ve sayilar dizisindeki en küçük sayı ile en büyük sayıyı bu değişkenlere atayın. (for döngüsü kullanın)
-		
-		3b. `ucetambolunenler` adında bir dizi tanımlayın ve bu diziye sayilar dizisindeki 3'ün tam katı olan sayıları atayın (.forEach metodunu kullanın)
-		
-		3c. `ucetambolunenler` dizisindeki sayıların toplamını .reduce metoduyla bulup, sonucu `ucebolunenlerintoplami` değişkenine yazdırın (.reduce metodunu kullanın)
-		
-		3d. `besyuzdenkucuksayilar` adında bir dizi oluşturarak, sayilar dizisinin içindeki 500'den küçük sayıları bu diziye atayın (.filter metodunu kullanın)
-		
-		3e. besyuzdenkucuksayilar dizisindeki sayıları küçükten büyüğe sıralayıp `siralisayilar` adındaki bir diziye aktarın (.sort metodunu kullanın)
-		
-		3f. `tekraredensayilar` adında bir dizi oluşturun. sayilar dizisi içerisindeki bazı sayılar birden fazla kere yazılmış. sayilar dizisi içerisinde birden fazla kez yazılmış sayıları tespit ederek kaç kere tekrar edildiğini belirten bir string oluşturulup `tekraredensayilar` dizisine aktarılmasını istiyoruz. Örnek string: "{sayı} sayısı {tekrarSayisi} kere tekrar edilmiştir"
-		ÖRNEK: sayilar dizisi içerisinde 45 sayısı 3 kere yazılmış. "45 sayısı 3 tekrar edilmiştir" stringini `tekraredensayilar` dizisine aktaracağız.
-		💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
-*/
-
-/*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
-
+/* 	GÖREV 3 */
 let ucetambolunenler,
   enkucuk,
   enbuyuk,
@@ -97,29 +59,48 @@ let ucetambolunenler,
   siralisayilar,
   tekraredensayilar;
 
-// 3a çözümü
+// (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın
+console.log("Eleman sayısı:", sayilar.length);
 
-/* kodlar buraya */
+// 3a: en küçük ve en büyük (for döngüsü)
+enkucuk = Infinity;
+enbuyuk = -Infinity;
+for (let i = 0; i < sayilar.length; i++) {
+  const n = sayilar[i];
+  if (n < enkucuk) enkucuk = n;
+  if (n > enbuyuk) enbuyuk = n;
+}
 
-// 3b çözümü:
+// 3b: 3'e tam bölünenler (forEach)
+ucetambolunenler = [];
+sayilar.forEach((n) => {
+  // "tam kat" beklentisi: kalan 0 olmalı
+  if (n % 3 === 0) {
+    ucetambolunenler.push(n);
+  }
+});
 
-/* kodlar buraya */
+// 3c: 3'e bölünenlerin toplamı (reduce)
+ucebolunenlerintoplami = ucetambolunenler.reduce((acc, n) => acc + n, 0);
 
-// 3c çözümü:
+// 3d: 500'den küçükler (filter)
+besyuzdenkucuksayilar = sayilar.filter((n) => n < 500);
 
-/* kodlar buraya */
+// 3e: küçükten büyüğe sıralı (sort) — kopya üzerinde sırala
+siralisayilar = [...besyuzdenkucuksayilar].sort((a, b) => a - b);
 
-// 3d çözümü
-
-/* kodlar buraya */
-
-// 3e çözümü
-
-/* kodlar buraya */
-
-// 3f çözümü
-
-/* kodlar buraya */
+// 3f: tekrar eden sayılar ve adetleri
+tekraredensayilar = [];
+const sayac = {};
+for (let i = 0; i < sayilar.length; i++) {
+  const n = sayilar[i];
+  sayac[n] = (sayac[n] || 0) + 1;
+}
+for (const [sayiStr, adet] of Object.entries(sayac)) {
+  if (adet > 1) {
+    tekraredensayilar.push(`${sayiStr} sayısı ${adet} kere tekrar edilmiştir`);
+  }
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
